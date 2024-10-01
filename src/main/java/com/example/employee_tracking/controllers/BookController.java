@@ -13,18 +13,19 @@ import java.util.List;
 @Controller
 public class BookController {
 
-    private List<Book> allBooks = new ArrayList<>();
+    private List<Book> allBooks = List.of(
+            new Book("book1", "marian popescu", 31),
+            new Book("book2", "dorel ionescu", 25)
+    );
 
     @GetMapping("/employees")
     @ResponseBody
     public List<Book> getAllEmployees() {
-        return List.of(
-                new Book("carte1", "marian popescu", 31),
-                new Book("carte2", "dorel ionescu", 25)
-        );
+        return allBooks;
     }
 
     @PostMapping("/employees")
+    @ResponseBody
     public Book getAllEmployees(@RequestBody Book book) {
         allBooks.add(book);
         return book;
