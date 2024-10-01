@@ -7,15 +7,18 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
 public class BookController {
 
-    private List<Book> allBooks = List.of(
+    private final List<Book> templateValues = List.of(
             new Book("book1", "author1", 1931),
             new Book("book2", "author2", 1925)
     );
+
+    private List<Book> allBooks = new ArrayList<>(templateValues);
 
     @GetMapping("/employees")
     @ResponseBody
