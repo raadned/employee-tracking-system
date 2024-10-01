@@ -14,8 +14,8 @@ import java.util.List;
 public class BookController {
 
     private List<Book> allBooks = List.of(
-            new Book("book1", "marian popescu", 31),
-            new Book("book2", "dorel ionescu", 25)
+            new Book("book1", "author1", 1931),
+            new Book("book2", "author2", 1925)
     );
 
     @GetMapping("/employees")
