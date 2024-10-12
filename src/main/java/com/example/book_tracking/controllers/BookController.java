@@ -1,6 +1,6 @@
-package com.example.employee_tracking.controllers;
+package com.example.book_tracking.controllers;
 
-import com.example.employee_tracking.model.Book;
+import com.example.book_tracking.model.Book;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
